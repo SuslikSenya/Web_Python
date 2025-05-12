@@ -162,31 +162,31 @@ const AdminDashboard = () => {
                                         </div>
                                     </form>
                                 ) : (
-                                    <div className="flex flex-col md:flex-row md:items-center justify-between">
-                                        <div>
-                                            <span className="font-medium">{u.username}</span>
-                                            <span className="text-gray-400 ml-2">({u.email || 'no email'})</span>
-                                            {u.is_superuser && (
-                                                <span className="ml-2 px-2 py-1 bg-yellow-900 text-yellow-200 text-xs rounded-full">
-                                                    admin
-                                                </span>
-                                            )}
-                                        </div>
-                                        <div className="mt-2 md:mt-0 space-x-2">
-                                            <button
-                                                onClick={() => setEditUser(u)}
-                                                className="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
-                                            >
-                                                Edit
-                                            </button>
-                                            <button
-                                                onClick={() => handleDelete(u.id)}
-                                                className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700 text-sm"
-                                            >
-                                                Delete
-                                            </button>
-                                        </div>
-                                    </div>
+                                        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+                                            <div className="flex items-center flex-wrap gap-2">
+                                                <span className="font-semibold text-white">{u.username}</span>
+                                                <span className="text-gray-400">({u.email || 'no email'})</span>
+                                                {u.is_superuser && (
+                                                    <span className="px-2 py-0.5 bg-yellow-800 text-yellow-200 text-xs rounded-full">
+                                                        admin
+                                                    </span>
+                                                )}
+                                            </div>
+                                            <div className="flex gap-2">
+                                                <button
+                                                    onClick={() => setEditUser(u)}
+                                                    className="px-3 py-1 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+                                                >
+                                                    Edit
+                                                </button>
+                                                <button
+                                                    onClick={() => handleDelete(u.id)}
+                                                    className="px-3 py-1 bg-red-600 text-white rounded-md hover:bg-red-700 text-sm"
+                                                >
+                                                    Delete
+                                                </button>
+                                            </div>
+                                </div>
                                 )}
                             </li>
                         ))}
