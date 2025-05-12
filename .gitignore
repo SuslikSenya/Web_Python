@@ -1,0 +1,16 @@
+.venv/
+venv/
+
+*.pyc
+*.pyo
+*.pyd
+
+.env/
+*.env
+
+*.sqlite3
+
+frontend/node_modules/
+
+.vscode/
+.idea/
